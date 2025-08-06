@@ -47,7 +47,7 @@ Here is a basic example:
 
 ```python
 from dotenv import load_dotenv
-from langchain_custom_models.ChatVolcEngine import ChatVolcEngine
+from langchain_custom_models import ChatVolcEngine
 from langchain_core.messages import HumanMessage, SystemMessage
 
 # Load environment variables from .env file
