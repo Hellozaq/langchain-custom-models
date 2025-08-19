@@ -8,6 +8,7 @@ from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, System
 from langchain_core.outputs import ChatGeneration, ChatResult
 from langchain_core.tools import BaseTool
 from langchain_core.utils.function_calling import convert_to_openai_tool
+from langchain_core.callbacks.manager import CallbackManagerForLLMRun
 
 # Import Volcengine Ark SDK
 try:
@@ -106,6 +107,7 @@ class ChatVolcEngine(BaseChatModel):
         self,
         messages: List[BaseMessage],
         stop: Optional[List[str]] = None,
+        run_manager: Optional[CallbackManagerForLLMRun] = None,
         **kwargs: Any,
     ) -> ChatResult:
         """
@@ -115,6 +117,7 @@ class ChatVolcEngine(BaseChatModel):
         Args:
             messages: A list of chat messages, including system, human, and AI messages.
             stop: A list of strings to stop generation.
+            run_manager: Optional callback manager for LLM run.
             **kwargs: Additional parameters to pass to the Volcengine Ark API.
 
         Returns:
