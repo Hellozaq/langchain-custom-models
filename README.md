@@ -9,7 +9,8 @@ Currently, the following provider is supported:
 
 - **Seamless Integration**: Drop-in replacement for any Langchain `ChatModel`.
 - **Volcengine Ark Support**: Full support for `ChatVolcEngine` to interact with Volcengine's Ark API.
-- **Standard Interface**: Works with standard Langchain message types (`SystemMessage`, `HumanMessage`, `AIMessage`).
+- **Standard Interface**: Works with standard Langchain message types (`SystemMessage`, `HumanMessage`, `AIMessage`, `ToolMessage`).
+- **Tool Binding Support**: Full support for `bind_tools()` method for function calling capabilities.
 
 ## Installation
 
